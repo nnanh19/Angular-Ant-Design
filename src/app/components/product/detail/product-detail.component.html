@@ -1,0 +1,57 @@
+<div>
+  <a nz-button  nzType="default" nzPrimary routerLink="/admin/product">Danh sách</a>
+</div>
+<div>
+  <h1>Cập nhật sản phẩm</h1>
+</div>
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+            <nz-form-label [nzSpan]="5" nzRequired nzFor="note">Tên sản phẩm</nz-form-label>
+            <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+            <input id="name" type="text" nz-input formControlName="name" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="5" nzRequired nzFor="price">Gía sản phẩm</nz-form-label>
+            <nz-form-control [nzSpan]="12" nzErrorTip="Please input your price!">
+            <input id="price" type="text" nz-input formControlName="price" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="5" nzRequired nzFor="desc">Mô tả sản phẩm</nz-form-label>
+            <nz-form-control [nzSpan]="12" nzErrorTip="Please input your desc!">
+            <textarea id="desc" type="text" nz-input formControlName="desc"></textarea>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="5" nzRequired nzFor="img">Ảnh sản phẩm</nz-form-label>
+            <nz-form-control [nzSpan]="12" nzErrorTip="Please input your img!">
+            <input id="img" type="text" nz-input formControlName="img" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSpan]="5" nzRequired nzFor="quantity">Số lượng sản phẩm</nz-form-label>
+            <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+            <input id="quantity" type="text" nz-input formControlName="quantity" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzFor="status" nzRequired>Tình trạng</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please select your status!">
+          <nz-select
+            id="status"
+            formControlName="status"
+            nzPlaceHolder="Hàng còn hay hết rồi?"
+            (ngModelChange)="statusChange($event)"
+          >
+            <nz-option nzValue="true" nzLabel="Còn hàng"></nz-option>
+            <nz-option nzValue="false" nzLabel="Hết hàng"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="12" [nzOffset]="5">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+</form>

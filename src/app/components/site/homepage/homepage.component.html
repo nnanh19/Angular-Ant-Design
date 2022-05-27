@@ -1,0 +1,7 @@
+<div class="container">
+    <div nz-row *ngFor="let product of products">
+        <div nzSpan="8">
+                <a routerLink="/product/{{product.id}}"><img width="200" src="{{product.img}}" alt=""></a>
+        </div>
+    </div>
+</div>

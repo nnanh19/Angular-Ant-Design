@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "name": "san pham 1  updated",
+      "price": 1000,
+      "desc": "desc",
+      "img": "https://th.bing.com/th/id/OIP.t--X6zM7Doazy1ykIVF9jQHaNK?pid=ImgDet&rs=1",
+      "quantity": "345",
+      "status": "false",
+      "id": 1
+    },
+    {
+      "name": "san pham 2",
+      "price": 2000,
+      "desc": "desc",
+      "img": "https://i.pinimg.com/originals/38/b0/50/38b0506199dff237292be65079d408eb.jpg",
+      "quantity": 10,
+      "status": "false",
+      "id": 2
+    },
+    {
+      "name": "san pham 3",
+      "price": 3000,
+      "desc": "desc",
+      "img": "https://i.pinimg.com/originals/c8/08/a9/c808a92b94cc2cd310db2ee49156cb4c.jpg",
+      "quantity": 10,
+      "status": "true",
+      "id": 3
+    },
+    {
+      "name": "san pham 4",
+      "price": 4000,
+      "desc": "desc",
+      "img": "https://i.pinimg.com/originals/ea/21/2b/ea212b41f65518fe57a6e14fe9e0b4c5.jpg",
+      "quantity": 10,
+      "status": "true",
+      "id": 4
+    },
+    {
+      "name": "san pham 5",
+      "price": 5000,
+      "desc": "desc",
+      "img": "https://uploadfile.bizhizu.cn/up/c7/12/d7/c712d7ba5604dc489b6439c213cbca4b.jpg.source.jpg",
+      "quantity": 10,
+      "status": "false",
+      "id": 5
+    },
+    {
+      "name": "Sản phẩm new 1",
+      "price": "7000",
+      "desc": "new 1",
+      "img": "https://vnn-imgs-f.vgcloud.vn/2018/08/09/09/pham-bang-bang-bi-giam-long-phat-tien-va-dong-bang-phim-anh.jpg",
+      "quantity": "100",
+      "status": "true",
+      "id": 6
+    },
+    {
+      "name": "Sản phẩm like new",
+      "price": "8000",
+      "desc": "likenew",
+      "img": "https://phunugioi.com/wp-content/uploads/2020/08/anh-cuc-hoa-mi-va-be-gai.jpg",
+      "quantity": "10",
+      "status": "true",
+      "id": 7
+    },
+    {
+      "name": "san pham like new 3",
+      "price": "100000",
+      "desc": "like",
+      "img": "https://th.bing.com/th/id/OIP.t--X6zM7Doazy1ykIVF9jQHaNK?pid=ImgDet&rs=1",
+      "quantity": "10",
+      "status": "true",
+      "id": 8
+    }
+  ]
+}

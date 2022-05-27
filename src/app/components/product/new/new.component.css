@@ -1,0 +1,6 @@
+[nz-form] {
+    min-width: 600px;
+}
+input, textarea{
+ min-width: 590px;
+}
