@@ -10,17 +10,8 @@ const routes : Routes = [
       component: SiteLayoutComponent,
       children: [
         { path: 'product' , loadChildren: () => import('./../site/product/product.module').then(m => m.ProductSiteModule)},
-        {
-            path: 'home',
-            component: HomepageComponent,
-            pathMatch: 'full'
-        },
-        {
-            path: '',
-            redirectTo: 'home',
-            pathMatch: 'full'
-        }
-        
+        { path: 'home',component: HomepageComponent, },
+        { path: '', redirectTo: 'home',pathMatch: 'full' }
       ]
     }
 ]

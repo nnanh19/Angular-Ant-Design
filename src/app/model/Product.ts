@@ -5,5 +5,5 @@ export interface IProduct{
     desc: string,
     img: string,
     quantity?: string,
-    status: boolean
+    status: boolean | string
 }

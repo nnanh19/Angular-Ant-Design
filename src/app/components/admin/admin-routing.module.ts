@@ -8,8 +8,9 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
+      { path: '' , redirectTo: 'dashboard', pathMatch: 'full'},
       { path: 'product' , loadChildren: () => import('./../product/product.module').then(m => m.ProductModule)},
-      { path: '' , component: NotfoundpageComponent, pathMatch: 'full'},
+      { path: 'dashboard' , component: NotfoundpageComponent},
     ]
   },
 ];

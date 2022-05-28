@@ -27,7 +27,8 @@
           <nz-divider nzType="vertical"></nz-divider>
         </td>
         <td>{{ product.quantity }}</td>
-        <td *ngIf="product.status">{{ product.status }}</td>
+        <td *ngIf="product.status === 'true' ">Còn hàng</td>
+        <td *ngIf="product.status === 'false' ">Hết hàng</td>
         <td>
           <a nz-button  nzType="default" nzPrimary routerLink="/admin/product/{{product.id}}">Sửa</a>
           <button nz-button nzType="primary" nzDanger (click)="onHandlerRemove(product.id!)">Xóa</button>

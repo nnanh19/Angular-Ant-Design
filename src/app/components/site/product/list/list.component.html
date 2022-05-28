@@ -2,7 +2,13 @@
     <div *ngFor="let product of products">
         <div nzSpan="8" >
             <div nz-col >
-                <a href="/product/{{product.id}}"><img class="img-product" src="{{product.img}}" alt=""></a>
+                <img
+                nz-image
+                width="200px"
+                height="300px"
+                nzSrc="{{product.img}}"
+                alt=""
+                />
                 <p>{{product.name}}</p>
                 <p>{{product.price}}</p>
             </div>

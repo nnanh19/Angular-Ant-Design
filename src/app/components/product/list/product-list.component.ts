@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit {
   }
   onHandlerRemove(id : number){
     this.ListProducts = this.ListProducts.filter(product => product.id !== id)
-    // this.productService.removeProduct(id).subscribe(() => console.log('Xóa thành công'))
+    this.productService.removeProduct(id).subscribe(() => console.log('Xóa thành công'))
     this.notification.create(
       'success',
       'Xóa thành công',
