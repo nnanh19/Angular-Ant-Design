@@ -12,13 +12,30 @@
             <div>
                 <ul>
                     <li><a href="">Trang chủ</a></li>
-                    <li><a href="/product">Sản phẩm</a></li>
-                    <li><a href="">Liên hệ</a></li>
+                    <li>
+                        <a nz-dropdown [nzDropdownMenu]="menu" routerLink="/product">
+                          Sản phẩm<i nz-icon nzType="down"></i>
+                          </a>
+                          <nz-dropdown-menu #menu="nzDropdownMenu">
+                            <ul nz-menu nzSelectable>
+                              <li nz-menu-item>1st menu item</li>
+                              <li nz-menu-item>2nd menu item</li>
+                              <li nz-menu-item>3rd menu item</li>
+                            </ul>
+                          </nz-dropdown-menu>
+                    </li>
+
                     <li><a href="">Tin tức</a></li>
                 </ul>
             </div>
             <div class="search">
-                Tìm kiếm
+                  <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+                    <input type="text" [(ngModel)]="keyword" nz-input placeholder="input search text" (keydown)="onSearchKey($event)" />
+                </nz-input-group>
+                  <ng-template #suffixIconButton>
+                    <button nz-button nzType="primary" (click)="onSearch()" nzSearch><i nz-icon nzType="search"></i></button>
+                  </ng-template>
+                  
             </div>
         </div>
     </nz-header>

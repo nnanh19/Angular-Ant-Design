@@ -2,7 +2,21 @@
     display: flex;
     justify-content: center;
 }
-.img-product{
-    width: 400px;
-    height: 400px
+nz-radio-group {
+    margin-bottom: 8px;
+}
+
+.ant-carousel{
+    min-height: 540px;
+}
+li.slick-active button{
+    background: black !important;
+}
+h3 {
+    color: #fff;
+    margin-bottom: 0;
+    user-select: none;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #1890ff;
 }

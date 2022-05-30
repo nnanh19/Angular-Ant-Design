@@ -7,10 +7,14 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzNotificationServiceModule } from 'ng-zorro-antd/notification';
 import { NewComponent } from './new/new.component';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,13 @@ import { NewComponent } from './new/new.component';
     NzFormModule,
     ReactiveFormsModule,
     NzSelectModule,
-    NzNotificationServiceModule
+    NzNotificationServiceModule,
+    FormsModule,
+    NzDropDownModule,
+    NzIconModule,
+    NzPopconfirmModule,
   ],
+  providers: [{provide: NzMessageService}],
   exports: [
     ProductDetailComponent,
     ProductListComponent

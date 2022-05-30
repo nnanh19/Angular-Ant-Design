@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "name": "san pham 1",
+      "name": "san pham 1 updated",
       "price": 1000,
       "desc": "desc",
       "img": "https://th.bing.com/th/id/OIP.t--X6zM7Doazy1ykIVF9jQHaNK?pid=ImgDet&rs=1",
-      "quantity": "345",
+      "quantity": "34",
       "status": "true",
       "id": 1
     },
@@ -53,6 +53,24 @@
       "quantity": "100",
       "status": "true",
       "id": 6
+    },
+    {
+      "name": "product like new",
+      "price": "10000",
+      "desc": "like new",
+      "img": "https://i.pinimg.com/originals/36/dc/b3/36dcb362a9ebcb47920ce80d03e28787.jpg",
+      "quantity": "10",
+      "status": "true",
+      "id": 7
+    },
+    {
+      "name": "product like new",
+      "price": "10000",
+      "desc": "like new",
+      "img": "https://i.pinimg.com/originals/36/dc/b3/36dcb362a9ebcb47920ce80d03e28787.jpg",
+      "quantity": "10",
+      "status": "true",
+      "id": 75
     }
   ]
 }

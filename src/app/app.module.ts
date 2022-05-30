@@ -25,9 +25,11 @@ registerLocaleData(uk);
     HttpClientModule,
     NzLayoutModule,
     NzMenuModule,
+    
   ],
   providers: [
-    NzAnchorComponent
+    NzAnchorComponent,
+    
   ],
   bootstrap: [AppComponent]
 })

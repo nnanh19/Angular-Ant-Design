@@ -5,10 +5,14 @@
   <h1>Danh sách sản phẩm</h1>
 </div>
 <div>
-  <nz-table #basicTable [nzData]="ListProducts">
+  <nz-table #nzTable  [nzData]="listOfDisplayData" nzTableLayout="fixed">
     <thead>
       <tr>
-        <th>Tên</th>
+        <th nzCustomFilter>Tên
+          <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+            <i nz-icon nzType="search"></i>
+          </nz-filter-trigger>
+        </th>
         <th>Giá</th>
         <th>Mô tả</th>
         <th>Ảnh</th>
@@ -18,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of basicTable.data">
+      <tr *ngFor="let product of nzTable.data">
         <td>{{ product.name }}</td>
         <td>{{ product.price }}</td>
         <td>{{ product.desc }}</td>
@@ -31,9 +35,25 @@
         <td *ngIf="product.status === 'false' ">Hết hàng</td>
         <td>
           <a nz-button  nzType="default" nzPrimary routerLink="/admin/product/{{product.id}}">Sửa</a>
-          <button nz-button nzType="primary" nzDanger (click)="onHandlerRemove(product.id!)">Xóa</button>
+          <button nz-popconfirm
+          nzPopconfirmTitle="Bạn chắc chắn xóa?"
+          (nzOnConfirm)="onHandlerRemove(product.id!)"
+          (nzOnCancel)="cancel()"
+          nzOkText = 'Đồng ý'
+          nzCancelText = 'Hủy'
+          nzPopconfirmPlacement="leftTop"
+          nz-button nz-button nzType="primary" nzDanger>Xóa</button>
         </td>
       </tr>
     </tbody>
 </nz-table>
 </div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" (keydown)="searchKeyDown($event)"/>
+      <button nz-button nzSize="small" nzType="primary"  (click)="search()" class="search-button">Search</button>
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

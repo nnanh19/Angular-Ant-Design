@@ -8,13 +8,22 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./list.component.css']
 })
 export class ListProductSiteComponent implements OnInit {
+  isVisible = false;
+  isOkLoading = false;
+ 
+  totalLength: any 
+  page: number = 1
+
   products! : IProduct[]
   constructor(
     private productService: ProductService
   ) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(products => this.products = products)
+    this.productService.getProducts().subscribe(products => {
+      this.products = products
+      this.totalLength = products.length
+    })
   }
 
 }
