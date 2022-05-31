@@ -62,15 +62,26 @@
       "quantity": "10",
       "status": "true",
       "id": 7
+    }
+  ],
+  "users": [
+    {
+      "email": "nnanh99pt@gmail.com1",
+      "password": "$2a$10$oYrHYdMOHzLZd8dQmMk1u.Ag0Wek/xUYEBwKoDuc81FIzy/RWinfq",
+      "checkPassword": "123123",
+      "nickname": "anh123123",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "12345555",
+      "id": 1
     },
     {
-      "name": "product like new",
-      "price": "10000",
-      "desc": "like new",
-      "img": "https://i.pinimg.com/originals/36/dc/b3/36dcb362a9ebcb47920ce80d03e28787.jpg",
-      "quantity": "10",
-      "status": "true",
-      "id": 75
+      "email": "maunuocmat@gmail.com",
+      "password": "$2a$10$C6pOG/vaDUtVrOSTc8WFD.GVj2syUSVK37pxm46lX0XA.NDJDpl2O",
+      "checkPassword": "123123",
+      "nickname": "Anh không",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "123789",
+      "id": 2
     }
   ]
 }
