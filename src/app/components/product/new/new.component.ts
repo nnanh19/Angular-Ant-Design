@@ -19,7 +19,7 @@ export class NewComponent implements OnInit {
         this.router.navigateByUrl("/admin/product")
         this.notification.create(
           'success',
-          'Sửa thành công',
+          'Thêm mới thành công',
           ''
         );
       })

@@ -9,7 +9,6 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
-
 @NgModule({
   declarations: [
     SignupComponent,
@@ -23,7 +22,7 @@ import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
     NzSelectModule,
     ReactiveFormsModule,
     NzButtonModule,
-    NzCheckboxModule
+    NzCheckboxModule,
   ]
 })
 export class AuthModule { }

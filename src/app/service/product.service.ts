@@ -12,24 +12,26 @@ export class ProductService {
     private http: HttpClient
   ) { }
 
+  api = "http://localhost:3000/products/"
+
   getProducts(): Observable<IProduct[]>{
-    const products = this.http.get<IProduct[]>('https://my-json-server.typicode.com/nnanh19/Angular-Ant-Design/products')
+    const products = this.http.get<IProduct[]>(this.api)
     return products
   }
   getProduct(id : number): Observable<IProduct>{
-    const product = this.http.get<IProduct>('https://my-json-server.typicode.com/nnanh19/Angular-Ant-Design/products/'+ id)
+    const product = this.http.get<IProduct>(this.api + id)
     return product
   }
   createProduct(data : IProduct): Observable<IProduct>{
-    const product = this.http.post<IProduct>('https://my-json-server.typicode.com/nnanh19/Angular-Ant-Design/products/', data)
+    const product = this.http.post<IProduct>(this.api , data)
     return product
   }
   removeProduct(id : number): Observable<IProduct>{
-    const product = this.http.delete<IProduct>('https://my-json-server.typicode.com/nnanh19/Angular-Ant-Design/products/'+ id)
+    const product = this.http.delete<IProduct>(this.api + id)
     return product
   }
   updateProduct(data : IProduct): Observable<IProduct>{
-    const product = this.http.put<IProduct>('https://my-json-server.typicode.com/nnanh19/Angular-Ant-Design/products/'+ data.id, data )
+    const product = this.http.put<IProduct>(this.api + data.id, data )
     return product
   }
 }

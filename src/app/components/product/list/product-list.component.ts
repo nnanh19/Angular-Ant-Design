@@ -13,7 +13,7 @@ export class ProductListComponent implements OnInit {
   ListProducts! : IProduct[]
   searchValue = ''
   visible = false
-  listOfDisplayData! :any
+  listOfDisplayData! :IProduct[]
   constructor(
     private productService: ProductService,
     private notification: NzNotificationService,
@@ -27,7 +27,7 @@ export class ProductListComponent implements OnInit {
     })
   }
   onHandlerRemove(id : number){
-    this.ListProducts = this.ListProducts.filter(product => product.id !== id)
+    this.listOfDisplayData = this.ListProducts.filter(product => product.id !== id)
     this.productService.removeProduct(id).subscribe(() => console.log('Xóa thành công'))
     this.notification.create(
       'success',

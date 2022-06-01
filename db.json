@@ -44,44 +44,33 @@
       "quantity": 10,
       "status": "false",
       "id": 5
-    },
-    {
-      "name": "Sản phẩm new",
-      "price": "7000",
-      "desc": "new 1",
-      "img": "https://vnn-imgs-f.vgcloud.vn/2018/08/09/09/pham-bang-bang-bi-giam-long-phat-tien-va-dong-bang-phim-anh.jpg",
-      "quantity": "100",
-      "status": "true",
-      "id": 6
-    },
-    {
-      "name": "product like new",
-      "price": "10000",
-      "desc": "like new",
-      "img": "https://i.pinimg.com/originals/36/dc/b3/36dcb362a9ebcb47920ce80d03e28787.jpg",
-      "quantity": "10",
-      "status": "true",
-      "id": 7
     }
   ],
   "users": [
     {
-      "email": "nnanh99pt@gmail.com1",
-      "password": "$2a$10$oYrHYdMOHzLZd8dQmMk1u.Ag0Wek/xUYEBwKoDuc81FIzy/RWinfq",
-      "checkPassword": "123123",
-      "nickname": "anh123123",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$SK7JMm6PfUDFItGCu2ODfO8QEnMxar68tLuFJUruPGgeG4bIhXDGO",
+      "nickname": "admin",
+      "role": 1,
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "12345555",
+      "phoneNumber": "9886622",
       "id": 1
     },
     {
-      "email": "maunuocmat@gmail.com",
-      "password": "$2a$10$C6pOG/vaDUtVrOSTc8WFD.GVj2syUSVK37pxm46lX0XA.NDJDpl2O",
-      "checkPassword": "123123",
-      "nickname": "Anh không",
+      "email": "nnanh99pt@gmail.com",
+      "password": "$2a$10$TNPotbfGUA5ZflRIJqGLpORY7dwx7dE2IiAy6sOVyr96OBKiVIf/W",
+      "nickname": "anh123123",
       "phoneNumberPrefix": "+86",
-      "phoneNumber": "123789",
+      "phoneNumber": "9886622",
       "id": 2
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "$2a$10$dbPmCY47rZaET02G1trCEOOArYwBBAdKBCbnbyS/RL25pf7SyneLu",
+      "nickname": "member",
+      "phoneNumberPrefix": "+86",
+      "phoneNumber": "987644433",
+      "id": 3
     }
   ]
 }

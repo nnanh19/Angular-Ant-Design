@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
 import { AuthService } from 'src/app/service/auth.service';
@@ -18,9 +19,8 @@ export class SignupComponent implements OnInit {
 
   submitForm(): void {
     if (this.validateForm.valid) {
-      console.log('submit', this.validateForm.value);
-      this.signUpService.createUser(this.validateForm.value).subscribe(user => {
-        localStorage.setItem('user', JSON.stringify(user))
+      this.signUpService.signUp({...this.validateForm.value, checkPassword : undefined}).subscribe(user => {
+        this.router.navigateByUrl('/auth/signin')
       })
     } else {
       Object.values(this.validateForm.controls).forEach(control => {
@@ -49,7 +49,8 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private signUpService : AuthService
+    private signUpService : AuthService,
+    private router : Router
     ) {}
 
   ngOnInit(): void {

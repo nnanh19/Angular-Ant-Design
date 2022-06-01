@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAnchorComponent } from 'ng-zorro-antd/anchor';
+import { AuthGuard } from './service/auth.guard';
 
 registerLocaleData(uk);
 
@@ -29,7 +30,7 @@ registerLocaleData(uk);
   ],
   providers: [
     NzAnchorComponent,
-    
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
